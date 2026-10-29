@@ -1,81 +1,64 @@
-# PUZDEV
+# Puzzle Tech Studios LLC
 
-Static website for Puzzle Tech Studios LLC, published under the public name PUZDEV. The company is an independent mobile app development studio in Nevada, United States. The intended domain is `puzdev.com`.
+Corporate website for **Puzzle Tech Studios LLC**, an independent mobile software development company in Nevada, United States.
 
-The site is plain HTML, CSS, and a small script. There is no build step, package install, or backend. It can be opened locally and published from the `main` branch root on GitHub Pages.
+Intended domain: `https://puzdev.com`
 
-Paths to styles, scripts, and pages are relative, so the site works on a project URL such as `https://username.github.io/repository/` before a custom domain is connected.
+Static HTML, CSS, and minimal JavaScript. No build step. Compatible with GitHub Pages from the `main` branch root.
 
 ## Preview locally
-
-Double-click `index.html`, or from this folder run:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then open `http://localhost:8080`. Also open `privacy.html` and use Home, Apps, About, and Contact.
+Open `http://localhost:8080`.
+
+## Pre-launch checklist (owner only — not shown on the website)
+
+### Email aliases
+
+Confirm each `@puzdev.com` alias receives and sends mail via Zoho before treating it as production-ready for support or Apple verification:
+
+- [ ] `hello@puzdev.com` — general business
+- [ ] `godfocus@puzdev.com` — God Focus support
+- [ ] `roamxp@puzdev.com` — RoamXP support
+- [ ] `partners@puzdev.com` — partnerships
+
+Do not claim these addresses are verified until the checks above are complete.
+
+### Legal review
+
+- [ ] Review `privacy.html` and `terms.html` before relying on them for formal filings
+- [ ] Confirm app-specific policies remain accurate on their own sites
+
+### App Store listings (already wired on the site)
+
+- God Focus: https://apps.apple.com/us/app/god-focus-bible-scroll/id6791024734 (`id6791024734`)
+- RoamXP: https://apps.apple.com/us/app/roamxp-habit-tracker-focus/id6821217688 (`id6821217688`)
+
+Screenshots and icons in `assets/apps/` were downloaded from Apple’s iTunes Lookup API for those exact app IDs. See `assets/apps/manifest.json`.
+
+### App legal pages
+
+- https://puzzleknows.github.io/god-focus-website/privacy.html
+- https://puzzleknows.github.io/god-focus-website/terms.html
+- https://puzzleknows.github.io/roamxp-website/privacy/
+- https://puzzleknows.github.io/roamxp-website/terms/
+
+### Identity
+
+- Public company name: Puzzle Tech Studios LLC
+- Domain and emails may use `puzdev.com`
+- Do not publish EIN, D-U-N-S, phone, residential address, or founder personal details without approval
+- Do not claim Apple has completed organization membership migration
 
 ## Publish on GitHub Pages
 
-1. Push this folder to the `main` branch of a GitHub repository. Keep the HTML files at the repository root.
-2. In the repository, open Settings, then Pages.
-3. Deploy from the branch `main` and set the folder to `/ (root)`.
-4. Open the `github.io` address GitHub provides and confirm every page and navigation link.
-
-Do not add a `CNAME` file, and do not change DNS, until `puzdev.com` is registered and the custom domain is turned on in GitHub Pages. GitHub can write that file when the domain is configured there.
-
-Canonical and Open Graph URLs already use `https://puzdev.com/`. Until that domain resolves, give people the live Pages address. For Apple Developer Program organization verification, submit a public URL that actually loads and shows the legal name Puzzle Tech Studios LLC.
-
-## PLACEHOLDERS — verify before launch
-
-### Contact email
-
-`hello@puzdev.com` is the published business, support, and privacy address. Confirm the mailbox exists, that you control it, and that a message sent to it arrives before launch or before you rely on it for Apple verification. The site does not publish a phone number, street address, EIN, or D-U-N-S number.
-
-### App download links
-
-`script.js` keeps the App Store and Google Play buttons hidden until an exact https URL is present:
-
-```javascript
-const APP_LINKS = {
-  godFocus: {
-    appStore: "",
-    googlePlay: ""
-  },
-  roamxp: {
-    appStore: "",
-    googlePlay: ""
-  }
-};
-```
-
-When a listing is verified, replace only that empty string with the exact URL. Leave the other string empty. Do not guess an App Store or Google Play address. Visitors need JavaScript for those buttons; the rest of the site does not.
-
-### App artwork
-
-The product cards use simple original marks, not screenshots. Replace a mark only with artwork you own for that app. Do not use stock photos, mockups of phones, or invented interface images. If you add an image file, refer to it with a relative path.
-
-### Social preview image
-
-Open Graph tags do not include an image. Link previews will show text until you add a real image and an absolute `og:image` URL. Skip this until the image exists.
-
-### Custom domain
-
-Register `puzdev.com`, then connect it in GitHub Pages. Do not commit `CNAME` before that, and do not change DNS from this project.
+Deploy from `main` / `(root)`. Do not change DNS from this project. Preserve any GitHub-managed `CNAME` if present.
 
 ## Files
 
-- `index.html` — home page
-- `privacy.html` — website privacy policy
-- `styles.css` — layout and visual design
-- `script.js` — verified App Store and Google Play links
-- `favicon.svg` — mark
-- `robots.txt` — allows public crawling
-- `.nojekyll` — publishes the files as-is, without Jekyll
-
-## Notes
-
-The site does not set cookies or load analytics, fonts, or other third-party scripts. If that changes, update `privacy.html` in the same release. The privacy page does not claim the host keeps no technical logs.
-
-There is no contact form. Mail goes to `hello@puzdev.com`.
+- `index.html`, `privacy.html`, `terms.html`
+- `styles.css`, `script.js`, `favicon.svg`, `robots.txt`, `.nojekyll`
+- `assets/apps/` — official App Store screenshots, icons, and source manifest
